@@ -1,0 +1,214 @@
+<html>
+    <head>
+        
+        <title>BugTracker | Sistema de Reporte de Bugs</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="https://marcelopereira.dev/images/favicons/favicon-16x16.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script>
+          // navegador + relógio
+          document.onreadystatechange = () => {
+              if( document.readyState === 'interactive'){
+                  document.getElementById('userAgent').value = window.navigator.userAgent
+                  document.getElementById('userDate').value = new Date()
+              }
+          }
+        </script>
+       <style>
+            /*************************************
+                F O O T E R
+            *************************************/
+            ul {
+                padding: 0;
+                list-style: none;
+            }
+    
+            footer {
+                background-color: black;
+                position: fixed;
+                bottom:0;
+                left:0;
+            }
+    
+            footer p {
+                font-size: .9rem;
+                color: #999;
+            }
+    
+            footer nav ul {
+                max-width: 280px;
+                margin: 0 auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+    
+            /* Ícones Redes Sociais */
+            .c-link--facebook:hover {
+                color: #3b5998;
+            }
+    
+            .c-link--github:hover {
+                color: #EA4E2E;
+            }
+    
+            .c-link--linkedin:hover {
+                color: #0077B5;
+            }
+    
+            .c-link--instagram:hover {
+                color: #8134AF;
+            }
+    
+            .c-link--facebook:hover::after {
+                background: #3b5998;
+            }
+    
+            .c-link--github:hover::after {
+                background: #EA4E2E;
+            }
+    
+            .c-link--linkedin:hover::after {
+                background: #0077B5;
+            }
+    
+            .c-link--instagram:hover::after {
+                background: #8134AF;
+            }
+    
+            .c-link {
+                position: relative;
+                color: #999;
+            }
+    
+            .c-link:not(:last-of-type) {
+                margin-right: 15px;
+            }
+    
+            .c-tooltip::before,
+            .c-tooltip::after {
+                display: block;
+                position: absolute;
+                left: 50%;
+                -webkit-transform: translate(-50%, -10px);
+                transform: translate(-50%, -10px);
+                opacity: 0;
+                transition: .2s;
+            }
+    
+            .c-tooltip::before {
+                content: '';
+                bottom: calc(100% + 2px);
+                border: solid 5px transparent;
+                border-top-color: currentColor;
+            }
+    
+            .c-tooltip::after {
+                content: attr(aria-label);
+                bottom: calc(100% + 12px);
+                padding: .61em .93em;
+                font-size: .875rem;
+                color: #FFF;
+                border-radius: 3px;
+            }
+    
+            .c-tooltip:hover::before,
+            .c-tooltip:hover::after {
+                opacity: 1;
+                -webkit-transform: translate(-50%);
+                transform: translate(-50%);
+            }
+    
+            footer nav ul li {
+                font-size: 1.8rem;
+                padding: 10px;
+            }
+    
+            .creditos {
+                margin-bottom: 30px;
+            }
+    
+            .creditos a {
+                color: #17a2b8;
+                opacity: 0.8;
+                text-decoration: none;
+            }
+    
+            .creditos a:hover {
+                color: #0d8597;
+            }
+    
+            .creditos span {
+                font-weight: bold;
+            }
+            /* Outros estilos da pagina*/
+            .btn {
+               background-color: black;
+               color: #fff;
+                 }
+      
+            .navbar {
+              background-color: black;
+                    }
+      
+            .navbar-brand {
+              color: #fff;
+               }
+
+            .navbar-brand:hover {
+              color: rgb(58, 58, 58);
+                  }
+            .alert {
+                 margin-top: 10px;
+                 }      
+       </style>
+    </head>
+    <body>
+        <nav class="navbar ">
+         <div class="container">
+           <a class="navbar-brand " href="/">Bug<Strong>Tracker</Strong><small> | by Mario Henrique</small></a>
+           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+           <a href="https://github.com/mariohenriquezocante" target="_blank" class="btn btn-outline-light px-3 py-2"><i class="fab fa-github"></i> GitHub</a>
+         </div>
+        </nav>
+        <div class="container">
+            <div class="alert alert-success" role="alert">
+               Seu problema foi reportado com sucesso! 
+            </div>
+            <a class="btn " href="/" role="button">Voltar</a>
+            <hr class="mb-5">
+        </div>
+    <footer class="container-fluid  text-center py-5">
+        <aside>
+          <nav>
+            <ul class="d-flex justify-content-center">
+              <li>
+                <a href="https://www.facebook.com/profile.php?id=100003180015680" target="_blank" class="c-link c-link--facebook c-tooltip" aria-label="Facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/mariohenriquezocante" target="_blank" class="c-link c-link--github c-tooltip" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/mariohenriqu_/?hl=pt-br" target="_blank" class="c-link c-link--instagram c-tooltip" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/mario-henrique-de-almeida-zocante-289b6b138/" target="_blank" class="c-link c-link--linkedin c-tooltip" aria-label="Linkedin">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+       </aside>
+       <div class="container creditos">
+          <p>© 2019 | Desenvolvido  por <a href="http://github.com/mariohenriquezocante">
+              <span>Mario Henrique</span></a> e hospedado em <a href="https://zeit.co/" target="_blank"><span>ZEIT Now</span></a>.
+          </p>
+       </div>
+    </footer>
+    </body>
+</html>

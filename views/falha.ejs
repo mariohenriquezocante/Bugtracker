@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>BugTracker | Sistema de Reporte de Bugs</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="https://marcelopereira.dev/images/favicons/favicon-16x16.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script>
+          // navegador + relógio
+          document.onreadystatechange = () => {
+              if( document.readyState === 'interactive'){
+                  document.getElementById('userAgent').value = window.navigator.userAgent
+                  document.getElementById('userDate').value = new Date()
+              }
+          }
+        </script>
+         <style>
+            .btn {
+              background-color: black;
+              color: #fff;
+                }
+            
+            .navbar {
+              background-color: black;
+                   }
+            
+            .navbar-brand {
+              color: #fff;
+                  }
+      
+            .navbar-brand:hover {
+              color: rgb(58, 58, 58);
+                   }
+            .alert {
+                margin-top: 10px;
+            }      
+          </style>
+    </head>
+    <body>
+        <nav class="navbar ">
+          <div class="container">
+            <a class="navbar-brand " href="/">Bug<Strong>Tracker</Strong><small> | by Mario Henrique</small></a>
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+            <a href="https://github.com/mariohenriquezocante" target="_blank" class="btn btn-outline-light px-3 py-2"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </nav>
+        <div class="container">
+            <div class="alert alert-success" role="alert">
+                Erro ao enviar formulário! Tente novamente!
+            </div>
+
+            <a class="btn " href="/" role="button">Tentar novamente</a>
+        </div>
+
+    </body>
+</html>
